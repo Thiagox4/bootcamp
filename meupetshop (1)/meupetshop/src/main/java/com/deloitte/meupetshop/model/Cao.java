@@ -1,19 +1,16 @@
 package com.deloitte.meupetshop.model;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Cao {
 
-    public String chip;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
+
     public String nome;
+    public String raca;
     public int idade;
-    public String cpfDono;
-
-    public Cao(){}
-
-    public Cao(String chip, String nome, int idade, String cpfDono) {
-        this.chip = chip;
-        this.nome = nome;
-        this.idade = idade;
-        this.cpfDono = cpfDono;
-    }
 
 }

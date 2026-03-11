@@ -1,17 +1,15 @@
 package com.deloitte.meupetshop.model;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Cliente {
 
-    public String cpf;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
+
     public String nome;
-    public String dataNascimento;
-
-    public Cliente(){}
-
-    public Cliente(String cpf, String nome, String dataNascimento) {
-        this.cpf = cpf;
-        this.nome = nome;
-        this.dataNascimento = dataNascimento;
-    }
+    public String cpf;
 
 }

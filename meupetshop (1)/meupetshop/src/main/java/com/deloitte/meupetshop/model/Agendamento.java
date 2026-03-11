@@ -1,17 +1,18 @@
 package com.deloitte.meupetshop.model;
 
+import jakarta.persistence.*;
+import java.time.LocalDate;
+
+@Entity
 public class Agendamento {
 
-    public String chipCao;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
+
     public String servico;
-    public String horario;
-
-    public Agendamento(){}
-
-    public Agendamento(String chipCao, String servico, String horario) {
-        this.chipCao = chipCao;
-        this.servico = servico;
-        this.horario = horario;
-    }
+    public LocalDate data;
+    public String nomeCao;
+    public String nomeCliente;
 
 }
